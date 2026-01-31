@@ -15,18 +15,19 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(-45deg, #b4e51f, #40e0d0, #4a90e2, #9b59b6, #e74c3c, #f39c12, #20b2aa, #16a085);
-            background-size: 600% 600%;
-            animation: gradient 25s ease-in-out infinite;
-            color: #ffffff;
-            position: relative;
-            overflow: hidden;
-        }
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #b4e51f, #40e0d0, #4a90e2, #9b59b6, #e74c3c, #f39c12, #20b2aa, #16a085);
+    background-size: 600% 600%;
+    animation: gradient 25s ease-in-out infinite;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
 
         @keyframes gradient {
             0% { background-position: 0% 50%; }
@@ -36,18 +37,22 @@
 
         /* Multi-layered gradient for hypnotic effect */
         body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(180, 229, 31, 0.3), rgba(64, 224, 208, 0.3), rgba(155, 89, 182, 0.3), rgba(243, 156, 18, 0.3));
-            background-size: 400% 400%;
-            animation: gradient2 30s ease infinite;
-            pointer-events: none;
-            z-index: 0;
-        }
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh; /* Ensures full coverage on mobile */
+    background: linear-gradient(45deg, rgba(180, 229, 31, 0.3), rgba(64, 224, 208, 0.3), rgba(155, 89, 182, 0.3), rgba(243, 156, 18, 0.3));
+    background-size: 400% 400%;
+    animation: gradient2 30s ease infinite;
+    pointer-events: none;
+    z-index: 0;
+}
 
         @keyframes gradient2 {
             0% { background-position: 0% 100%; }
