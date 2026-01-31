@@ -17,16 +17,19 @@
         body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(-45deg, #b4e51f, #40e0d0, #4a90e2, #9b59b6, #e74c3c, #f39c12, #20b2aa, #16a085);
     background-size: 600% 600%;
+    background-attachment: fixed;
     animation: gradient 25s ease-in-out infinite;
     color: #ffffff;
     position: relative;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
         @keyframes gradient {
@@ -36,15 +39,17 @@
         }
 
         /* Multi-layered gradient for hypnotic effect */
-        body::after {
+body::after {
     content: '';
     position: fixed;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
     background: linear-gradient(45deg, rgba(180, 229, 31, 0.3), rgba(64, 224, 208, 0.3), rgba(155, 89, 182, 0.3), rgba(243, 156, 18, 0.3));
     background-size: 400% 400%;
+    background-attachment: fixed;
     animation: gradient2 30s ease infinite;
     pointer-events: none;
     z-index: 0;
