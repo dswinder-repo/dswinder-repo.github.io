@@ -1,23 +1,217 @@
-Dustyn Winder
-Hey 🤝 I build, back, and partner with businesses operating at the frontier. Mostly Africa. Here's what I'm working on.
-🌍 Akili Ventures
-Private investment firm deploying permanent capital across Africa's most critical sectors: mobility, healthcare, energy, and finance.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dustyn Winder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-→ akili.ventures
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: crosshair;
+            position: relative;
+            overflow-x: hidden;
+        }
 
-🌉 Equinox Group Holdings
-Connecting global markets with African opportunity. AI-powered business consulting and soft landing services for companies expanding into or out of the continent—entity formation, compliance, operational infrastructure.
+        body.light {
+            background-color: #ffffff;
+            color: #000000;
+        }
 
-→ eqncs.com
+        body.dark {
+            background-color: #000000;
+            color: #ffffff;
+        }
 
-🔑 Index East
-Bespoke advisory for capital, culture, and complexity in frontier markets and emerging economies. We facilitate cross-border capital deployment and strategic partnerships where conventional advisory doesn't reach.
+        body.light a {
+            color: #007700;
+        }
 
-→ index.east
+        body.dark a {
+            color: #00ff00;
+        }
 
-🏛️ Good Bones Group
-Hospitality ventures. Family holding company.
+        body.light .link-style {
+            color: #007700;
+        }
 
-→ coming soon
+        body.dark .link-style {
+            color: #00ff00;
+        }
 
-dswinder at me dot com x linkedin spotify
+        body.light .stealth {
+            color: #666666;
+        }
+
+        body.dark .stealth {
+            color: #999999;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .link-style {
+            font-style: normal;
+        }
+
+        .toggle-container {
+            position: fixed;
+            top: 35px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 8px 12px;
+            border: 1px solid currentColor;
+            z-index: 100;
+        }
+
+        /* Plane animation */
+        .plane {
+            position: fixed;
+            top: 5px;
+            font-size: 20px;
+            z-index: 10;
+            animation: fly 20s linear infinite;
+        }
+
+        @keyframes fly {
+            0% {
+                left: -50px;
+            }
+            100% {
+                left: calc(100% + 50px);
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .intro {
+            margin-bottom: 50px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .section p {
+            margin-bottom: 8px;
+        }
+
+        .links {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid currentColor;
+        }
+
+        .links a {
+            margin-right: 20px;
+        }
+
+        .links span {
+            margin-right: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid currentColor;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="plane">✈</div>
+
+    <div class="toggle-container" onclick="toggleTheme()">
+        [toggle]
+    </div>
+
+    <h1>Dustyn Winder</h1>
+
+    <div class="intro">
+        Hey 🤝 I build, back, and partner with businesses operating at the frontier. Mostly Africa. Here's what I'm working on.
+    </div>
+
+    <div class="section">
+        <h2>🌍 Akili Ventures</h2>
+        <p>Private investment firm deploying permanent capital across Africa's most critical sectors: mobility, healthcare, energy, and finance.</p>
+        <p><a href="https://akili.ventures" target="_blank">→ akili.ventures</a></p>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h2>🌉 Equinox Group Holdings</h2>
+        <p>Connecting global markets with African opportunity. AI-powered business consulting and soft landing services for companies expanding into or out of the continent—entity formation, compliance, operational infrastructure.</p>
+        <p><a href="https://eqncs.com" target="_blank">→ eqncs.com</a></p>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h2>🔑 Index East</h2>
+        <p>Bespoke advisory for capital, culture, and complexity in frontier markets and emerging economies. We facilitate cross-border capital deployment and strategic partnerships where conventional advisory doesn't reach.</p>
+        <p><a href="https://index.east" target="_blank">→ index.east</a></p>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h2>🏛️ Good Bones Group</h2>
+        <p class="stealth">Hospitality ventures. Family holding company.</p>
+        <p><span class="link-style stealth">→ coming soon</span></p>
+    </div>
+
+    <div class="links">
+        <span>dswinder at me dot com</span>
+        <a href="https://twitter.com/dswinder" target="_blank">x</a>
+        <a href="https://www.linkedin.com/in/dswinder/" target="_blank">linkedin</a>
+        <a href="https://open.spotify.com" target="_blank">spotify</a>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('light')) {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.className = savedTheme;
+    </script>
+</body>
+</html>
