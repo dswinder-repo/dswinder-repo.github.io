@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Alchemist Board — American Alchemy Connection Map</title>
+  <meta name="description" content="Interactive conspiracy board mapping connections across all episodes of American Alchemy with Jesse Michels. People, events, craft, programs, and the threads that connect them.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Patrick+Hand&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/board.css">
+  <link rel="stylesheet" href="css/graph.css">
+  <link rel="stylesheet" href="css/controls.css">
+  <link rel="stylesheet" href="css/panels.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Loading overlay -->
+  <div id="loading-overlay">
+    <div class="loading-content">
+      <div class="loading-title">THE ALCHEMIST BOARD</div>
+      <div class="loading-subtitle">Mapping the connections...</div>
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="board-header">
+    <div class="header-left">
+      <h1 class="board-title">THE ALCHEMIST BOARD</h1>
+      <span class="board-subtitle">American Alchemy with Jesse Michels</span>
+    </div>
+    <div class="header-center">
+      <div class="search-container">
+        <span class="search-icon">&#128269;</span>
+        <input type="text" id="search-input" placeholder="Search people, events, programs..." autocomplete="off">
+        <button id="search-clear" class="search-clear" aria-label="Clear search">&times;</button>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="node-count" id="node-count"></div>
+      <button class="help-btn" id="help-btn" aria-label="Help">?</button>
+    </div>
+  </header>
+
+  <!-- Filter bar -->
+  <div id="filter-bar" class="filter-bar"></div>
+
+  <!-- Main graph container -->
+  <div id="cy"></div>
+
+  <!-- Hover tooltip -->
+  <div id="tooltip" class="tooltip" style="display: none;"></div>
+
+  <!-- Detail panel (desktop) -->
+  <aside id="detail-panel" class="detail-panel">
+    <button class="panel-close" id="panel-close" aria-label="Close panel">&times;</button>
+    <div class="panel-content" id="panel-content"></div>
+  </aside>
+
+  <!-- Bottom sheet (mobile) -->
+  <div id="bottom-sheet" class="bottom-sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-content" id="sheet-content"></div>
+  </div>
+
+  <!-- Zoom controls -->
+  <div id="zoom-controls" class="zoom-controls">
+    <button class="zoom-btn" id="zoom-in" aria-label="Zoom in">+</button>
+    <button class="zoom-btn" id="zoom-out" aria-label="Zoom out">&minus;</button>
+    <button class="zoom-btn zoom-fit" id="zoom-fit" aria-label="Fit all">&#9638;</button>
+    <button class="zoom-btn zoom-reset" id="zoom-reset" aria-label="Reset view">&#8634;</button>
+  </div>
+
+  <!-- Help modal -->
+  <div id="help-modal" class="help-modal" style="display: none;">
+    <div class="help-content">
+      <button class="help-close" id="help-close">&times;</button>
+      <h2>How to Use The Alchemist Board</h2>
+      <ul>
+        <li><strong>Pan:</strong> Click and drag the background</li>
+        <li><strong>Zoom:</strong> Scroll wheel or pinch on mobile</li>
+        <li><strong>Hover:</strong> Mouse over a node to preview it</li>
+        <li><strong>Select:</strong> Click a node to see all its connections</li>
+        <li><strong>Navigate:</strong> Click connections in the detail panel to jump to them</li>
+        <li><strong>Search:</strong> Type in the search bar to find entities</li>
+        <li><strong>Filter:</strong> Toggle category buttons to show/hide types</li>
+        <li><strong>Deselect:</strong> Click the background to clear selection</li>
+      </ul>
+      <div class="help-legend">
+        <h3>Node Types</h3>
+        <div id="help-legend-items"></div>
+      </div>
+      <p class="help-credit">Data sourced from <a href="https://www.youtube.com/@JesseMichels" target="_blank" rel="noopener">American Alchemy with Jesse Michels</a></p>
+    </div>
+  </div>
+
+  <!-- Cytoscape.js + extensions via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.30.4/dist/cytoscape.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/layout-base@2.0.1/layout-base.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cose-base@2.2.0/cose-base.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-fcose@2.2.0/cytoscape-fcose.js"></script>
+
+  <!-- App JS (order matters) -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/panels.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

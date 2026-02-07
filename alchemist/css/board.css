@@ -1,0 +1,298 @@
+/* === THE ALCHEMIST BOARD — Core Board Styles === */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Cork board palette */
+  --cork-bg: #b8956a;
+  --cork-dark: #a07848;
+  --cork-light: #d4b896;
+  --frame-color: #3e2712;
+  --frame-light: #6b4226;
+
+  /* Paper and ink */
+  --paper: #f5f0e8;
+  --paper-yellow: #fff8dc;
+  --paper-aged: #f0e6d2;
+  --ink-dark: #2c1810;
+  --ink-medium: #4a3828;
+  --ink-light: #7a6858;
+
+  /* Red string */
+  --string-red: #cc2200;
+  --string-highlight: #ff0000;
+
+  /* Category colors */
+  --cat-person: #4A90D9;
+  --cat-event: #D94A4A;
+  --cat-craft: #8B8B8B;
+  --cat-alien: #4AD94A;
+  --cat-program: #D9C84A;
+  --cat-organization: #D9854A;
+  --cat-episode: #9B59B6;
+  --cat-concept: #95A5A6;
+  --cat-location: #1ABC9C;
+
+  /* UI */
+  --header-bg: rgba(30, 18, 10, 0.92);
+  --header-height: 56px;
+  --filter-height: 44px;
+  --panel-width: 380px;
+  --z-header: 100;
+  --z-filter: 99;
+  --z-tooltip: 200;
+  --z-panel: 150;
+  --z-modal: 300;
+  --z-loading: 500;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Patrick Hand', cursive, sans-serif;
+  color: var(--ink-dark);
+  background: #1a0e06;
+}
+
+/* === Loading Overlay === */
+#loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loading);
+  background: rgba(10, 5, 2, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#loading-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2.5rem;
+  color: var(--string-red);
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(204, 34, 0, 0.4);
+}
+
+.loading-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: var(--cork-light);
+  margin-bottom: 24px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(204, 34, 0, 0.2);
+  border-top-color: var(--string-red);
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* === Header === */
+#board-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: var(--z-header);
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+  border-bottom: 2px solid var(--frame-color);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.board-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.25rem;
+  color: var(--string-red);
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.board-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem;
+  color: var(--cork-light);
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.node-count {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem;
+  color: var(--cork-light);
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.help-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cork-light);
+  background: transparent;
+  color: var(--cork-light);
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.help-btn:hover {
+  background: var(--string-red);
+  border-color: var(--string-red);
+  color: white;
+}
+
+/* === Help Modal === */
+.help-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: rgba(10, 5, 2, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.help-content {
+  background: var(--paper-aged);
+  border: 3px solid var(--frame-color);
+  border-radius: 4px;
+  padding: 32px;
+  max-width: 520px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+.help-content h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.4rem;
+  color: var(--ink-dark);
+  margin-bottom: 16px;
+}
+
+.help-content h3 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.1rem;
+  color: var(--ink-dark);
+  margin: 16px 0 8px;
+}
+
+.help-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.help-content li {
+  padding: 6px 0;
+  font-size: 1rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.help-content li strong {
+  color: var(--string-red);
+}
+
+.help-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ink-medium);
+  line-height: 1;
+}
+
+.help-close:hover {
+  color: var(--string-red);
+}
+
+.help-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 8px 4px 0;
+  font-size: 0.9rem;
+}
+
+.help-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.help-credit {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  text-align: center;
+}
+
+.help-credit a {
+  color: var(--string-red);
+  text-decoration: none;
+}
+
+.help-credit a:hover {
+  text-decoration: underline;
+}

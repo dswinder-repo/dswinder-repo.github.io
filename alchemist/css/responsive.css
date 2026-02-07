@@ -1,0 +1,104 @@
+/* === Responsive Breakpoints === */
+
+/* Tablet */
+@media (max-width: 1023px) {
+  :root {
+    --panel-width: 320px;
+  }
+
+  .board-subtitle {
+    display: none;
+  }
+
+  .search-container {
+    max-width: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 48px;
+    --filter-height: 40px;
+  }
+
+  /* Header simplification */
+  #board-header {
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .board-title {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .board-subtitle {
+    display: none;
+  }
+
+  .header-center {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .search-container {
+    max-width: none;
+  }
+
+  #search-input {
+    font-size: 0.9rem;
+    padding: 5px 28px;
+  }
+
+  .node-count {
+    display: none;
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+  }
+
+  .filter-label {
+    display: none;
+  }
+
+  /* Hide desktop panel, show bottom sheet */
+  .detail-panel {
+    display: none !important;
+  }
+
+  .bottom-sheet {
+    display: block;
+  }
+
+  /* Hide zoom controls on mobile (use pinch) */
+  .zoom-controls {
+    display: none;
+  }
+}
+
+/* Touch device adjustments */
+.touch-device .tooltip {
+  display: none !important;
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .board-title {
+    font-size: 0.85rem;
+  }
+
+  .help-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.85rem;
+  }
+}

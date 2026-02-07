@@ -1,0 +1,294 @@
+/* === Hover Tooltip === */
+
+.tooltip {
+  position: fixed;
+  z-index: var(--z-tooltip);
+  background: var(--paper-aged);
+  border: 2px solid var(--frame-color);
+  border-radius: 3px;
+  padding: 10px 14px;
+  max-width: 260px;
+  pointer-events: none;
+  box-shadow:
+    3px 3px 8px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  transform: rotate(-1deg);
+  transition: opacity 0.15s ease;
+}
+
+.tooltip-name {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 0.95rem;
+  color: var(--ink-dark);
+  margin-bottom: 4px;
+}
+
+.tooltip-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 8px;
+  font-family: 'Caveat', cursive;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.tooltip-desc {
+  font-size: 0.85rem;
+  color: var(--ink-medium);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tooltip-connections {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* === Detail Panel (Desktop) === */
+
+.detail-panel {
+  position: fixed;
+  top: calc(var(--header-height) + var(--filter-height));
+  right: 0;
+  bottom: 0;
+  width: var(--panel-width);
+  z-index: var(--z-panel);
+  background: var(--paper-aged);
+  border-left: 3px solid var(--frame-color);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Subtle paper texture */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(0, 0, 0, 0.03) 28px,
+      rgba(0, 0, 0, 0.03) 29px
+    );
+}
+
+.detail-panel.open {
+  transform: translateX(0);
+}
+
+.panel-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: var(--paper-aged);
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--ink-light);
+  padding: 8px 14px;
+  line-height: 1;
+  z-index: 2;
+  transition: color 0.2s;
+}
+
+.panel-close:hover {
+  color: var(--string-red);
+}
+
+.panel-content {
+  padding: 16px 20px 32px;
+}
+
+/* Panel photo area */
+.panel-photo-area {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.panel-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.panel-name {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5rem;
+  color: var(--ink-dark);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.panel-badge {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 10px;
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.panel-sub {
+  display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  margin-left: 6px;
+  text-transform: capitalize;
+}
+
+.panel-divider {
+  height: 1px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ink-light) 0px,
+    var(--ink-light) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  opacity: 0.3;
+  margin: 14px 0;
+}
+
+.panel-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink-medium);
+}
+
+.panel-section-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1rem;
+  color: var(--string-red);
+  margin-bottom: 8px;
+}
+
+/* Connection list */
+.panel-connections {
+  list-style: none;
+  padding: 0;
+}
+
+.connection-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.connection-item:hover {
+  background: rgba(204, 34, 0, 0.08);
+}
+
+.connection-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.connection-label {
+  font-family: 'Caveat', cursive;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+  flex: 1;
+}
+
+.connection-rel {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  font-style: italic;
+  flex-shrink: 0;
+}
+
+/* Episode list */
+.panel-episodes {
+  list-style: none;
+  padding: 0;
+}
+
+.episode-item {
+  padding: 5px 8px;
+  margin: 2px 0;
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem;
+  color: var(--cat-episode);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.episode-item:hover {
+  background: rgba(155, 89, 182, 0.1);
+}
+
+/* Tags */
+.panel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  font-family: 'Caveat', cursive;
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 8px;
+  border-radius: 8px;
+}
+
+/* === Bottom Sheet (Mobile) === */
+
+.bottom-sheet {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-panel);
+  background: var(--paper-aged);
+  border-top: 3px solid var(--frame-color);
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  max-height: 70vh;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bottom-sheet.peek {
+  transform: translateY(calc(100% - 80px));
+}
+
+.bottom-sheet.expanded {
+  transform: translateY(0);
+}
+
+.sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  margin: 10px auto;
+}
+
+.sheet-content {
+  padding: 0 20px 32px;
+}
