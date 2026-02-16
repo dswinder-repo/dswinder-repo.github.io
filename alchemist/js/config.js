@@ -124,18 +124,18 @@ AlchemyBoard.LAYOUT_OPTIONS = {
   animationDuration: 1200,
   animationEasing: 'ease-out-cubic',
   nodeDimensionsIncludeLabels: true,
-  nodeRepulsion: 7000,
-  idealEdgeLength: 130,
-  edgeElasticity: 0.45,
+  nodeRepulsion: 12000,
+  idealEdgeLength: 180,
+  edgeElasticity: 0.35,
   nestingFactor: 0.1,
-  gravity: 0.3,
-  gravityRange: 3.8,
+  gravity: 0.18,
+  gravityRange: 4.5,
   numIter: 2500,
   tile: true,
-  tilingPaddingVertical: 40,
-  tilingPaddingHorizontal: 40,
+  tilingPaddingVertical: 60,
+  tilingPaddingHorizontal: 60,
   fit: true,
-  padding: 60
+  padding: 80
 };
 
 // Default node sizes per category

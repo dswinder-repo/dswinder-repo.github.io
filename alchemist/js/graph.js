@@ -130,7 +130,7 @@ AlchemyBoard.initGraph = function() {
         // Label text — centered inside the node
         'label': 'data(label)',
         'font-family': '"Caveat", cursive',
-        'font-size': 11,
+        'font-size': 10,
         'font-weight': 700,
         'color': '#2C1810',
         'text-valign': 'center',
@@ -138,7 +138,7 @@ AlchemyBoard.initGraph = function() {
         'text-outline-color': 'rgba(245, 240, 232, 0.85)',
         'text-outline-width': 2.5,
         'text-max-width': function(ele) {
-          return ((SIZES[ele.data('category')] || SIZES.concept).w - 10) + 'px';
+          return ((SIZES[ele.data('category')] || SIZES.concept).w + 4) + 'px';
         },
         'text-wrap': 'wrap',
         'text-overflow-wrap': 'anywhere',
