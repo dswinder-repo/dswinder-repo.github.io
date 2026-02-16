@@ -141,12 +141,12 @@ AlchemyBoard.LAYOUT_OPTIONS = {
 // Default node sizes per category
 AlchemyBoard.NODE_SIZES = {
   person:       { w: 72, h: 88 },
-  event:        { w: 88, h: 52 },
+  event:        { w: 88, h: 56 },
   craft:        { w: 58, h: 58 },
   alien:        { w: 62, h: 62 },
-  program:      { w: 82, h: 48 },
-  organization: { w: 78, h: 48 },
-  episode:      { w: 68, h: 44 },
-  concept:      { w: 76, h: 34 },
-  location:     { w: 68, h: 48 }
+  program:      { w: 82, h: 52 },
+  organization: { w: 82, h: 52 },
+  episode:      { w: 72, h: 50 },
+  concept:      { w: 76, h: 44 },
+  location:     { w: 72, h: 52 }
 };
