@@ -68,7 +68,26 @@ var PERSON_NODES = [
   { id: "person-edgar-mitchell", label: "Edgar Mitchell", category: "person", subcategory: "scientist", description: "Apollo 14 astronaut who became a consciousness researcher and advocate for UFO disclosure.", tags: ["apollo", "astronaut", "consciousness", "disclosure"] },
   { id: "person-floyd-odlum", label: "Floyd Odlum", category: "person", subcategory: "public-figure", description: "Investor who connected Townsend Brown's electrogravitics research to Northrop aviation.", tags: ["investor", "northrop", "townsend-brown", "aviation"] },
   { id: "person-allen-dulles", label: "Allen Dulles", category: "person", subcategory: "intelligence", description: "CIA director who orchestrated UFO secrecy, connected to JFK assassination and suppression of disclosure.", tags: ["CIA-director", "JFK", "secrecy", "cold-war"] },
-  { id: "person-james-forrestal", label: "James Forrestal", category: "person", subcategory: "politician", description: "First US Secretary of Defense whose suspicious death is linked to his knowledge of UFO programs.", tags: ["secretary-of-defense", "suspicious-death", "secrecy", "MJ-12"] }
+  { id: "person-james-forrestal", label: "James Forrestal", category: "person", subcategory: "politician", description: "First US Secretary of Defense whose suspicious death is linked to his knowledge of UFO programs.", tags: ["secretary-of-defense", "suspicious-death", "secrecy", "MJ-12"] },
+  // --- Cluster 1: Capital Nexus ---
+  { id: "person-peter-thiel", label: "Peter Thiel", category: "person", subcategory: "investor", description: "Billionaire co-founder of PayPal and Palantir. His 'Stagnation Thesis' — that physics progress halted in the 1970s — is the intellectual engine behind American Alchemy.", tags: ["thiel-capital", "founders-fund", "stagnation", "silicon-valley"] },
+  { id: "person-josh-wolfe", label: "Josh Wolfe", category: "person", subcategory: "investor", description: "Co-founder of Lux Capital, investing in 'hard tech' at the frontier of physics. Advocates for exploration of breakthrough propulsion and materials science.", tags: ["lux-capital", "hard-tech", "frontier-physics", "venture-capital"] },
+  // --- Cluster 2: Sol Foundation ---
+  { id: "person-peter-skafish", label: "Peter Skafish", category: "person", subcategory: "academic", description: "Anthropologist and Director of the Sol Foundation. Bridges humanities and anomalous phenomena research.", tags: ["sol-foundation", "anthropology", "director"] },
+  { id: "person-jennifer-preston", label: "Jennifer Preston", category: "person", subcategory: "advisor", description: "Chief Operating Officer of the Sol Foundation, managing operations and strategic coordination.", tags: ["sol-foundation", "COO", "operations"] },
+  { id: "person-jim-semivan", label: "Jim Semivan", category: "person", subcategory: "intelligence", description: "Former CIA officer and co-founder of TTSA. Sol Foundation advisor who has discussed personal NHI contact experiences.", tags: ["CIA", "TTSA", "sol-foundation", "experiencer"] },
+  { id: "person-tim-gallaudet", label: "Tim Gallaudet", category: "person", subcategory: "military", description: "Rear Admiral (ret.) and former NOAA administrator. Sol Foundation advisor investigating maritime UAP and USOs.", tags: ["navy", "NOAA", "sol-foundation", "USO", "oceanography"] },
+  { id: "person-avi-loeb", label: "Avi Loeb", category: "person", subcategory: "scientist", description: "Harvard astrophysicist and Sol Foundation advisor. Led the Galileo Project to search for physical evidence of extraterrestrial technology.", tags: ["harvard", "galileo-project", "astrophysics", "sol-foundation"] },
+  { id: "person-kevin-knuth", label: "Kevin Knuth", category: "person", subcategory: "scientist", description: "University at Albany physicist and Sol Foundation advisor studying UAP flight characteristics and propulsion physics.", tags: ["physics", "albany", "sol-foundation", "propulsion"] },
+  { id: "person-jeffrey-kripal", label: "Jeffrey Kripal", category: "person", subcategory: "academic", description: "Rice University professor of religion and Sol Foundation advisor exploring the ontological implications of NHI contact.", tags: ["rice-university", "religion", "sol-foundation", "ontology"] },
+  { id: "person-diana-pasulka", label: "Diana Pasulka", category: "person", subcategory: "academic", description: "UNC Wilmington professor and author of American Cosmic. Documented Tim Taylor (alias 'Tyler D') and the intersection of religion and UFO phenomena.", tags: ["american-cosmic", "tyler-d", "religion", "sol-foundation"] },
+  // --- Cluster 3: Esoteric Core / Nassau ---
+  { id: "person-ryan-bledsoe", label: "Ryan Bledsoe", category: "person", subcategory: "experiencer", description: "Son of Chris Bledsoe. Tim Taylor told Ryan about his membership in the Nassau Group and connection to Townsend Brown.", tags: ["bledsoe", "nassau-group", "experiencer"] },
+  // --- Cluster 4: Varginha Medical Corps ---
+  { id: "person-italo-venturelli", label: "Dr. Italo Venturelli", category: "person", subcategory: "medical", description: "Neurosurgeon at Varginha Regional Hospital who witnessed a living non-human being for 3-4 minutes and reported telepathic communication.", tags: ["varginha", "neurosurgeon", "telepathy", "witness"] },
+  { id: "person-marcos-neves", label: "Dr. Marcos Neves", category: "person", subcategory: "medical", description: "Orthopedic surgeon who allegedly performed surgery on a non-human being recovered at Varginha. Deceased 2018.", tags: ["varginha", "surgery", "deceased"] },
+  { id: "person-dr-janini", label: "Dr. Janini", category: "person", subcategory: "medical", description: "Pathologist who examined deceased officer Marco Chereze and attributed his death to a weaponized bacterial infection of unknown origin.", tags: ["varginha", "pathologist", "bacteria", "autopsy"] },
+  { id: "person-marco-chereze", label: "Marco Chereze", category: "person", subcategory: "military", description: "Brazilian military police officer who physically touched a Varginha entity. Died weeks later from a mysterious bacterial infection.", tags: ["varginha", "military-police", "infection", "deceased"] }
 ];
 
 // ===================== EPISODE NODES =====================
@@ -150,7 +169,10 @@ var EVENT_NODES = [
   { id: "event-grusch-testimony-2023", label: "Grusch Testimony 2023", category: "event", subcategory: "hearing", description: "David Grusch testified before Congress about crash retrieval and reverse engineering programs.", tags: ["congress", "testimony", "whistleblower"] },
   { id: "event-marshall-islands-debris", label: "Marshall Islands Debris", category: "event", subcategory: "incident", description: "Anomalous material recovered from Marshall Islands nuclear test site.", tags: ["debris", "nuclear", "marshall-islands"] },
   { id: "event-younger-dryas", label: "Younger Dryas ~12,000 BC", category: "event", subcategory: "historical", description: "A catastrophic impact event ~12,000 years ago that may have destroyed an advanced pre-ice-age civilization.", tags: ["ancient", "catastrophe", "ice-age", "impact"] },
-  { id: "event-maury-island-1947", label: "Maury Island UFO 1947", category: "event", subcategory: "incident", description: "Early UFO incident near Maury Island, Washington, connected to Peter Levenda's JFK research.", tags: ["early-ufo", "washington", "levenda", "1947"] }
+  { id: "event-maury-island-1947", label: "Maury Island UFO 1947", category: "event", subcategory: "incident", description: "Early UFO incident near Maury Island, Washington, connected to Peter Levenda's JFK research.", tags: ["early-ufo", "washington", "levenda", "1947"] },
+  { id: "event-sol-symposium", label: "Sol Foundation Symposium", category: "event", subcategory: "symposium", description: "Annual academic symposium hosted by the Sol Foundation bringing together scientists, military, and policymakers on UAP.", tags: ["sol-foundation", "academic", "policy", "symposium"] },
+  { id: "event-schumer-rounds", label: "Schumer-Rounds UAP Disclosure Act", category: "event", subcategory: "policy", description: "Bipartisan legislation introduced by Senators Schumer and Rounds to compel government transparency on UAP programs.", tags: ["legislation", "senate", "disclosure", "bipartisan"] },
+  { id: "event-trinity-crash-1945", label: "Trinity Crash 1945", category: "event", subcategory: "crash", description: "Alleged UFO crash at San Antonio, NM in August 1945, weeks after the first nuclear test at Trinity Site.", tags: ["crash", "nuclear", "new-mexico", "1945"] }
 ];
 
 var CRAFT_NODES = [
@@ -200,7 +222,13 @@ var ORG_NODES = [
   { id: "org-northrop-grumman", label: "Northrop Grumman", category: "organization", subcategory: "corporate", description: "Defense contractor that built the B-2 bomber, tied to Townsend Brown's electrogravitics.", tags: ["defense-contractor", "b2", "townsend-brown"] },
   { id: "org-sri", label: "Stanford Research Institute", category: "organization", subcategory: "research", description: "Where Hal Puthoff conducted remote viewing research for the Stargate program.", tags: ["puthoff", "remote-viewing", "stargate"] },
   { id: "org-thiel-capital", label: "Thiel Capital", category: "organization", subcategory: "corporate", description: "Peter Thiel's investment firm where Jesse Michels works.", tags: ["thiel", "michels", "investment"] },
-  { id: "org-congress", label: "Congress", category: "organization", subcategory: "government", description: "US Congress, conducting UAP oversight hearings and transparency legislation.", tags: ["oversight", "hearings", "legislation"] }
+  { id: "org-congress", label: "Congress", category: "organization", subcategory: "government", description: "US Congress, conducting UAP oversight hearings and transparency legislation.", tags: ["oversight", "hearings", "legislation"] },
+  { id: "org-sol-foundation", label: "Sol Foundation", category: "organization", subcategory: "advisory", description: "Academic think tank studying UAP, connecting Stanford scientists, CIA veterans, Navy admirals, and religious scholars to drive policy.", tags: ["think-tank", "academic", "policy", "nolan"] },
+  { id: "org-lux-capital", label: "Lux Capital", category: "organization", subcategory: "venture-capital", description: "Venture capital firm co-founded by Josh Wolfe, investing in 'hard tech' at the frontier of physics and materials science.", tags: ["venture-capital", "hard-tech", "wolfe"] },
+  { id: "org-founders-fund", label: "Founders Fund", category: "organization", subcategory: "venture-capital", description: "Peter Thiel's venture capital firm investing in transformative technology companies.", tags: ["thiel", "venture-capital", "technology"] },
+  { id: "org-earthtech", label: "EarthTech International", category: "organization", subcategory: "research", description: "Research lab founded by Hal Puthoff in Austin, TX, studying zero-point energy, advanced propulsion, and anomalous materials.", tags: ["puthoff", "zero-point", "propulsion", "austin"] },
+  { id: "org-nassau-group", label: "The Nassau Group", category: "organization", subcategory: "research", description: "Alleged secret research group in Nassau, Bahamas, connected to Townsend Brown and Tim Taylor. Investigating antigravity and metric engineering.", tags: ["secret", "bahamas", "townsend-brown", "tim-taylor"] },
+  { id: "org-noaa", label: "NOAA", category: "organization", subcategory: "government", description: "National Oceanic and Atmospheric Administration. Tim Gallaudet served as administrator before joining Sol Foundation.", tags: ["oceanography", "gallaudet", "maritime"] }
 ];
 
 var LOCATION_NODES = [
@@ -232,7 +260,12 @@ var CONCEPT_NODES = [
   { id: "concept-nuclear-ufo-connection", label: "Nuclear-UFO Connection", category: "concept", subcategory: "technology", description: "Pattern of UFO activity at nuclear weapons sites documented worldwide.", tags: ["nuclear", "pattern", "weapons"] },
   { id: "concept-psionic-abilities", label: "Psionic Abilities", category: "concept", subcategory: "paranormal", description: "Mental powers including telepathy and psychokinesis, used in intelligence programs.", tags: ["mental-powers", "telepathy", "military"] },
   { id: "concept-antigravity", label: "Antigravity", category: "concept", subcategory: "physics", description: "Technology to overcome gravity, central to reverse engineering efforts.", tags: ["propulsion", "gravity", "exotic"] },
-  { id: "concept-biefeld-brown-effect", label: "Biefeld-Brown Effect", category: "concept", subcategory: "physics", description: "Thrust from high-voltage capacitors, discovered by Townsend Brown in the 1920s.", tags: ["townsend-brown", "capacitor", "thrust"] }
+  { id: "concept-biefeld-brown-effect", label: "Biefeld-Brown Effect", category: "concept", subcategory: "physics", description: "Thrust from high-voltage capacitors, discovered by Townsend Brown in the 1920s.", tags: ["townsend-brown", "capacitor", "thrust"] },
+  { id: "concept-stagnation-thesis", label: "Stagnation Thesis", category: "concept", subcategory: "economics", description: "Peter Thiel's argument that fundamental physics progress halted in the 1970s, motivating investment in 'heretical' science and UFO-adjacent technology.", tags: ["thiel", "physics", "progress", "1970s"] },
+  { id: "concept-geometric-unity", label: "Geometric Unity", category: "concept", subcategory: "physics", description: "Eric Weinstein's proposed unified theory of physics, connecting gauge theory and general relativity in a 14-dimensional framework.", tags: ["weinstein", "unified-theory", "gauge-theory"] },
+  { id: "concept-the-protocol", label: "The Protocol", category: "concept", subcategory: "phenomenology", description: "Tim Taylor's methodology — specific sleep cycles, hydration, and meditation — used to receive 'downloads' of technical information from non-human intelligence.", tags: ["tim-taylor", "downloads", "nhi-communication", "meditation"] },
+  { id: "concept-metric-engineering", label: "Metric Engineering", category: "concept", subcategory: "physics", description: "Manipulation of spacetime geometry for propulsion. Taylor allegedly received metric engineering concepts via the Protocol.", tags: ["spacetime", "propulsion", "tim-taylor", "downloads"] },
+  { id: "concept-biological-hazard", label: "Biological Hazard", category: "concept", subcategory: "biology", description: "Risk of biological contamination from NHI contact. Marco Chereze died from a weaponized bacterial infection after touching a Varginha entity.", tags: ["varginha", "bacteria", "contamination", "chereze"] }
 ];
 
 // ===================== ALL EDGES =====================
@@ -565,7 +598,123 @@ var EDGES = [
   { id: "e-466", source: "ep-randy-anderson", target: "event-anderson-2014", label: "covers", weight: 5 },
   { id: "e-467", source: "ep-uap-gerb", target: "concept-crash-retrieval", label: "covers", weight: 4 },
   { id: "e-468", source: "ep-weinstein-puthoff", target: "program-stargate", label: "covers", weight: 4 },
-  { id: "e-469", source: "ep-robert-hastings", target: "concept-nuclear-ufo-connection", label: "covers", weight: 5 }
+  { id: "e-469", source: "ep-robert-hastings", target: "concept-nuclear-ufo-connection", label: "covers", weight: 5 },
+
+  // ===================== CLUSTER 1: CAPITAL NEXUS =====================
+  { id: "e-500", source: "person-peter-thiel", target: "org-thiel-capital", label: "founded", weight: 5 },
+  { id: "e-501", source: "person-peter-thiel", target: "org-founders-fund", label: "founded", weight: 5 },
+  { id: "e-502", source: "person-peter-thiel", target: "concept-stagnation-thesis", label: "originated", weight: 5 },
+  { id: "e-503", source: "person-peter-thiel", target: "person-jesse-michels", label: "employs", weight: 4 },
+  { id: "e-504", source: "person-peter-thiel", target: "person-eric-weinstein", label: "employs", weight: 4 },
+  { id: "e-505", source: "person-eric-weinstein", target: "org-thiel-capital", label: "former Managing Director", weight: 4 },
+  { id: "e-506", source: "person-eric-weinstein", target: "concept-geometric-unity", label: "created", weight: 5 },
+  { id: "e-507", source: "person-eric-weinstein", target: "concept-stagnation-thesis", label: "advocates", weight: 4 },
+  { id: "e-508", source: "person-josh-wolfe", target: "org-lux-capital", label: "co-founded", weight: 5 },
+  { id: "e-509", source: "person-josh-wolfe", target: "concept-stagnation-thesis", label: "advocates", weight: 3 },
+  { id: "e-510", source: "person-josh-wolfe", target: "concept-zero-point-energy", label: "investment thesis", weight: 3 },
+  { id: "e-511", source: "org-lux-capital", target: "concept-antigravity", label: "investment interest", weight: 2 },
+  { id: "e-512", source: "org-founders-fund", target: "concept-reverse-engineering", label: "investment interest", weight: 2 },
+  { id: "e-513", source: "concept-geometric-unity", target: "concept-stagnation-thesis", label: "responds to", weight: 3 },
+  { id: "e-514", source: "concept-stagnation-thesis", target: "concept-zero-point-energy", label: "motivates search for", weight: 3 },
+  { id: "e-515", source: "concept-stagnation-thesis", target: "concept-antigravity", label: "motivates search for", weight: 3 },
+  { id: "e-516", source: "person-peter-thiel", target: "concept-disclosure", label: "supports", weight: 3 },
+  { id: "e-517", source: "org-thiel-capital", target: "org-sol-foundation", label: "alleged funding link", weight: 2 },
+
+  // ===================== CLUSTER 2: SOL FOUNDATION =====================
+  { id: "e-520", source: "person-garry-nolan", target: "org-sol-foundation", label: "executive director", weight: 5 },
+  { id: "e-521", source: "person-peter-skafish", target: "org-sol-foundation", label: "director", weight: 5 },
+  { id: "e-522", source: "person-jennifer-preston", target: "org-sol-foundation", label: "COO", weight: 4 },
+  { id: "e-523", source: "person-tim-gallaudet", target: "org-sol-foundation", label: "advisor", weight: 4 },
+  { id: "e-524", source: "person-tim-gallaudet", target: "org-noaa", label: "former administrator", weight: 4 },
+  { id: "e-525", source: "person-tim-gallaudet", target: "concept-nuclear-ufo-connection", label: "investigated maritime UAP", weight: 3 },
+  { id: "e-526", source: "person-jim-semivan", target: "org-sol-foundation", label: "advisor", weight: 4 },
+  { id: "e-527", source: "person-jim-semivan", target: "org-cia", label: "former officer (25 years)", weight: 5 },
+  { id: "e-528", source: "person-jim-semivan", target: "program-ttsa", label: "co-founder", weight: 4 },
+  { id: "e-529", source: "person-jim-semivan", target: "concept-consciousness", label: "experiencer", weight: 3 },
+  { id: "e-530", source: "person-avi-loeb", target: "org-sol-foundation", label: "advisor", weight: 4 },
+  { id: "e-531", source: "person-avi-loeb", target: "concept-disclosure", label: "advocates scientific search", weight: 3 },
+  { id: "e-532", source: "person-kevin-knuth", target: "org-sol-foundation", label: "advisor", weight: 4 },
+  { id: "e-533", source: "person-kevin-knuth", target: "concept-antigravity", label: "studies UAP propulsion", weight: 3 },
+  { id: "e-534", source: "person-jeffrey-kripal", target: "org-sol-foundation", label: "advisor", weight: 4 },
+  { id: "e-535", source: "person-jeffrey-kripal", target: "concept-consciousness", label: "researches", weight: 4 },
+  { id: "e-536", source: "person-diana-pasulka", target: "org-sol-foundation", label: "advisor", weight: 3 },
+  { id: "e-537", source: "person-beatriz-villarroel", target: "org-sol-foundation", label: "advisor", weight: 3 },
+  { id: "e-538", source: "person-eric-davis", target: "org-sol-foundation", label: "advisor", weight: 3 },
+  { id: "e-539", source: "person-jacques-vallee", target: "org-sol-foundation", label: "emeritus", weight: 4 },
+  { id: "e-540", source: "event-sol-symposium", target: "org-sol-foundation", label: "hosted by", weight: 5 },
+  { id: "e-541", source: "event-sol-symposium", target: "event-schumer-rounds", label: "influenced policy", weight: 3 },
+  { id: "e-542", source: "event-schumer-rounds", target: "org-congress", label: "introduced in", weight: 5 },
+  { id: "e-543", source: "event-schumer-rounds", target: "concept-disclosure", label: "advances", weight: 4 },
+  { id: "e-544", source: "person-garry-nolan", target: "person-jacques-vallee", label: "collaborates with", weight: 4 },
+  { id: "e-545", source: "person-garry-nolan", target: "concept-crash-retrieval", label: "analyzed materials", weight: 4 },
+  { id: "e-546", source: "person-hal-puthoff", target: "org-earthtech", label: "founded", weight: 5 },
+  { id: "e-547", source: "org-earthtech", target: "concept-zero-point-energy", label: "researches", weight: 4 },
+  { id: "e-548", source: "org-earthtech", target: "concept-remote-viewing", label: "researches", weight: 3 },
+  { id: "e-549", source: "person-eric-davis", target: "org-earthtech", label: "worked at", weight: 4 },
+  { id: "e-550", source: "person-tom-delonge", target: "person-jim-semivan", label: "recruited for TTSA", weight: 3 },
+
+  // ===================== CLUSTER 3: ESOTERIC CORE / NASSAU GROUP =====================
+  { id: "e-560", source: "person-tim-taylor", target: "org-nassau-group", label: "alleged member", weight: 4 },
+  { id: "e-561", source: "person-townsend-brown", target: "org-nassau-group", label: "alleged member", weight: 4 },
+  { id: "e-562", source: "person-tim-taylor", target: "concept-the-protocol", label: "uses", weight: 5 },
+  { id: "e-563", source: "concept-the-protocol", target: "concept-metric-engineering", label: "produces", weight: 4 },
+  { id: "e-564", source: "concept-the-protocol", target: "concept-consciousness", label: "relies on", weight: 3 },
+  { id: "e-565", source: "person-tim-taylor", target: "person-ryan-bledsoe", label: "told about Nassau Group", weight: 4 },
+  { id: "e-566", source: "person-ryan-bledsoe", target: "person-chris-bledsoe", label: "son of", weight: 5 },
+  { id: "e-567", source: "person-diana-pasulka", target: "person-tim-taylor", label: "researched as 'Tyler D'", weight: 5 },
+  { id: "e-568", source: "person-tim-taylor", target: "concept-metric-engineering", label: "received via Protocol", weight: 4 },
+  { id: "e-569", source: "org-nassau-group", target: "concept-antigravity", label: "researches", weight: 4 },
+  { id: "e-570", source: "org-nassau-group", target: "concept-metric-engineering", label: "researches", weight: 4 },
+  { id: "e-571", source: "concept-metric-engineering", target: "concept-antigravity", label: "related to", weight: 3 },
+  { id: "e-572", source: "concept-metric-engineering", target: "concept-electrogravitics", label: "advanced form of", weight: 3 },
+  { id: "e-573", source: "person-diana-pasulka", target: "concept-consciousness", label: "researches religious aspects", weight: 3 },
+  { id: "e-574", source: "person-diana-pasulka", target: "person-jeffrey-kripal", label: "academic colleagues", weight: 3 },
+  { id: "e-575", source: "person-ryan-bledsoe", target: "event-bledsoe-2007", label: "present at", weight: 3 },
+
+  // ===================== CLUSTER 4: VARGINHA MEDICAL CORPS =====================
+  { id: "e-580", source: "person-italo-venturelli", target: "event-varginha-1996", label: "witnessed living entity", weight: 5 },
+  { id: "e-581", source: "person-italo-venturelli", target: "concept-telepathy", label: "experienced during encounter", weight: 4 },
+  { id: "e-582", source: "person-italo-venturelli", target: "alien-three-fingered", label: "examined", weight: 4 },
+  { id: "e-583", source: "person-marcos-neves", target: "event-varginha-1996", label: "performed surgery", weight: 5 },
+  { id: "e-584", source: "person-marcos-neves", target: "alien-three-fingered", label: "sutured", weight: 4 },
+  { id: "e-585", source: "person-dr-janini", target: "event-varginha-1996", label: "autopsied Chereze", weight: 4 },
+  { id: "e-586", source: "person-dr-janini", target: "concept-biological-hazard", label: "identified alien bacteria", weight: 5 },
+  { id: "e-587", source: "person-marco-chereze", target: "event-varginha-1996", label: "touched entity", weight: 5 },
+  { id: "e-588", source: "person-marco-chereze", target: "concept-biological-hazard", label: "died from", weight: 5 },
+  { id: "e-589", source: "person-marco-chereze", target: "alien-three-fingered", label: "physical contact", weight: 4 },
+  { id: "e-590", source: "person-james-fox", target: "person-italo-venturelli", label: "interviewed", weight: 4 },
+  { id: "e-591", source: "person-james-fox", target: "person-marcos-neves", label: "investigated", weight: 3 },
+  { id: "e-592", source: "person-james-fox", target: "person-marco-chereze", label: "documented death", weight: 4 },
+  { id: "e-593", source: "concept-biological-hazard", target: "event-varginha-1996", label: "consequence of", weight: 4 },
+  { id: "e-594", source: "person-italo-venturelli", target: "location-varginha", label: "practiced at", weight: 3 },
+
+  // ===================== CROSS-CLUSTER CONNECTIONS =====================
+  { id: "e-600", source: "person-jesse-michels", target: "person-garry-nolan", label: "interviewed", weight: 3 },
+  { id: "e-601", source: "person-jesse-michels", target: "person-diana-pasulka", label: "connected via Tim Taylor", weight: 2 },
+  { id: "e-602", source: "person-jesse-michels", target: "org-sol-foundation", label: "covers in episodes", weight: 2 },
+  { id: "e-603", source: "event-trinity-crash-1945", target: "location-area-51", label: "debris allegedly sent to", weight: 3 },
+  { id: "e-604", source: "event-trinity-crash-1945", target: "concept-crash-retrieval", label: "first alleged", weight: 4 },
+  { id: "e-605", source: "event-trinity-crash-1945", target: "concept-nuclear-ufo-connection", label: "confirms pattern", weight: 3 },
+  { id: "e-606", source: "person-jim-semivan", target: "person-lue-elizondo", label: "TTSA colleague", weight: 3 },
+  { id: "e-607", source: "person-tim-gallaudet", target: "location-skinwalker-ranch", label: "investigated phenomena", weight: 2 },
+  { id: "e-608", source: "person-garry-nolan", target: "person-hal-puthoff", label: "collaborates on materials", weight: 3 },
+  { id: "e-609", source: "person-avi-loeb", target: "concept-ancient-civilizations", label: "investigates interstellar artifacts", weight: 2 },
+  { id: "e-610", source: "org-sol-foundation", target: "concept-disclosure", label: "drives policy", weight: 4 },
+  { id: "e-611", source: "org-sol-foundation", target: "org-congress", label: "briefed members", weight: 3 },
+  { id: "e-612", source: "person-peter-thiel", target: "person-hal-puthoff", label: "connected via Weinstein", weight: 2 },
+  { id: "e-613", source: "person-josh-wolfe", target: "person-eric-weinstein", label: "intellectual allies", weight: 2 },
+  { id: "e-614", source: "org-lux-capital", target: "org-thiel-capital", label: "co-invest network", weight: 2 },
+  { id: "e-615", source: "ep-varginha-witnesses", target: "person-italo-venturelli", label: "features", weight: 4 },
+  { id: "e-616", source: "ep-varginha-witnesses", target: "person-marcos-neves", label: "features", weight: 3 },
+  { id: "e-617", source: "ep-varginha-witnesses", target: "concept-biological-hazard", label: "covers", weight: 3 },
+  { id: "e-618", source: "ep-chris-bledsoe", target: "person-ryan-bledsoe", label: "features", weight: 2 },
+  { id: "e-619", source: "ep-chris-bledsoe", target: "person-diana-pasulka", label: "references", weight: 2 },
+  { id: "e-620", source: "ep-nick-cook", target: "org-nassau-group", label: "references", weight: 2 },
+  { id: "e-621", source: "ep-townsend-brown", target: "org-nassau-group", label: "covers", weight: 3 },
+  { id: "e-622", source: "ep-bob-mcgwire", target: "org-nassau-group", label: "references", weight: 2 },
+  { id: "e-623", source: "ep-weinstein-1", target: "concept-geometric-unity", label: "covers", weight: 5 },
+  { id: "e-624", source: "ep-weinstein-1", target: "concept-stagnation-thesis", label: "covers", weight: 3 },
+  { id: "e-625", source: "ep-steven-greer", target: "event-trinity-crash-1945", label: "references", weight: 2 }
 ];
 
 // ===================== ASSEMBLE GRAPH DATA =====================

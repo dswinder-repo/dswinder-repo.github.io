@@ -8,13 +8,13 @@ AlchemyBoard.CATEGORIES = {
     label: 'People',
     color: '#4A90D9',
     icon: '\u{1F464}',
-    subcategories: ['experiencer', 'whistleblower', 'scientist', 'military', 'politician', 'journalist', 'researcher', 'intelligence', 'host', 'public-figure', 'filmmaker']
+    subcategories: ['experiencer', 'whistleblower', 'scientist', 'military', 'politician', 'journalist', 'researcher', 'intelligence', 'host', 'public-figure', 'filmmaker', 'investor', 'academic', 'medical', 'advisor']
   },
   event: {
     label: 'Events',
     color: '#D94A4A',
     icon: '\u{26A1}',
-    subcategories: ['sighting', 'crash', 'encounter', 'hearing', 'conference', 'leak', 'incident', 'historical']
+    subcategories: ['sighting', 'crash', 'encounter', 'hearing', 'conference', 'leak', 'incident', 'historical', 'policy', 'symposium']
   },
   craft: {
     label: 'Craft',
@@ -38,7 +38,7 @@ AlchemyBoard.CATEGORIES = {
     label: 'Organizations',
     color: '#D9854A',
     icon: '\u{1F3DB}',
-    subcategories: ['government', 'military', 'corporate', 'research', 'media', 'intelligence']
+    subcategories: ['government', 'military', 'corporate', 'research', 'media', 'intelligence', 'academic', 'advisory', 'venture-capital']
   },
   episode: {
     label: 'Episodes',
@@ -50,7 +50,7 @@ AlchemyBoard.CATEGORIES = {
     label: 'Topics',
     color: '#95A5A6',
     icon: '\u{1F4A1}',
-    subcategories: ['physics', 'biology', 'consciousness', 'disclosure', 'disinformation', 'technology', 'ancient', 'paranormal']
+    subcategories: ['physics', 'biology', 'consciousness', 'disclosure', 'disinformation', 'technology', 'ancient', 'paranormal', 'economics', 'phenomenology']
   },
   location: {
     label: 'Locations',
@@ -86,7 +86,23 @@ AlchemyBoard.RELATIONSHIPS = {
   type_of:       { label: 'type of' },
   sighted_at:    { label: 'sighted at' },
   suppressed:    { label: 'suppressed' },
-  member_of:     { label: 'member of' }
+  member_of:     { label: 'member of' },
+  invested_in:   { label: 'invested in' },
+  employs:       { label: 'employs' },
+  co_authored:   { label: 'co-authored' },
+  advised:       { label: 'advised' },
+  briefed:       { label: 'briefed' },
+  performed_surgery: { label: 'performed surgery on' },
+  autopsied:     { label: 'autopsied' },
+  alias_of:      { label: 'alias of' },
+  uses_protocol: { label: 'uses protocol' },
+  influenced:    { label: 'influenced' },
+  theorized:     { label: 'theorized' },
+  owns_stake:    { label: 'owns stake in' },
+  policy_influence: { label: 'influenced policy' },
+  son_of:        { label: 'son of' },
+  interviewed:   { label: 'interviewed' },
+  documented:    { label: 'documented' }
 };
 
 // Simple deterministic hash for edge curve offsets
