@@ -98,6 +98,17 @@ AlchemyBoard.initPanels = function() {
       html += '<p class="panel-desc">' + escapeHtml(data.description) + '</p>';
     }
 
+    // YouTube embed (for episode nodes with a youtubeId)
+    if (data.youtubeId) {
+      html += '<div class="panel-divider"></div>';
+      html += '<div class="panel-youtube">';
+      html += '<iframe width="100%" height="180" src="https://www.youtube.com/embed/' +
+        escapeHtml(data.youtubeId) + '" frameborder="0" ' +
+        'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+        'allowfullscreen loading="lazy" style="border-radius:6px;"></iframe>';
+      html += '</div>';
+    }
+
     // Connections grouped by category
     if (connections.length > 0) {
       html += '<div class="panel-divider"></div>';
@@ -122,7 +133,7 @@ AlchemyBoard.initPanels = function() {
       });
     }
 
-    // Episodes
+    // Episodes (with YouTube embeds for connected episodes)
     if (data.episodes && data.episodes.length > 0) {
       html += '<div class="panel-divider"></div>';
       html += '<h3 class="panel-section-title">Episodes</h3>';
@@ -132,6 +143,16 @@ AlchemyBoard.initPanels = function() {
         if (epNode.length) {
           html += '<li class="episode-item" data-node-id="' + epId + '">' +
             escapeHtml(epNode.data('label')) + '</li>';
+          // Show YouTube embed if the episode has a video
+          var ytId = epNode.data('youtubeId');
+          if (ytId) {
+            html += '<div class="panel-youtube panel-youtube-sm">';
+            html += '<iframe width="100%" height="140" src="https://www.youtube.com/embed/' +
+              escapeHtml(ytId) + '" frameborder="0" ' +
+              'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+              'allowfullscreen loading="lazy" style="border-radius:6px;margin:4px 0 8px;"></iframe>';
+            html += '</div>';
+          }
         }
       });
       html += '</ul>';

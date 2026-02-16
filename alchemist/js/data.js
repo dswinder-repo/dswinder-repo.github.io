@@ -825,8 +825,134 @@ var EDGES = [
   { id: "e-785", source: "event-nyt-2017", target: "event-grusch-testimony-2023", label: "led to", weight: 4 },
   { id: "e-786", source: "event-grusch-testimony-2023", target: "event-schumer-rounds", label: "catalyzed legislation", weight: 4 },
   { id: "e-787", source: "person-garry-nolan", target: "person-diana-pasulka", label: "expedited to crash site together", weight: 4 },
-  { id: "e-788", source: "person-luke-caverns", target: "location-great-pyramids", label: "investigates", weight: 3 }
+  { id: "e-788", source: "person-luke-caverns", target: "location-great-pyramids", label: "investigates", weight: 3 },
+
+  // ===================== WAVE 3: SYSTEMATIC GAP CLOSURE =====================
+
+  // --- Missing episode-topic edges ---
+  { id: "e-800", source: "ep-jacques-vallee", target: "alien-interdimensional", label: "covers", weight: 5 },
+  { id: "e-801", source: "ep-jacques-vallee", target: "program-blue-book", label: "covers", weight: 4 },
+  { id: "e-802", source: "ep-jacques-vallee", target: "concept-consciousness", label: "covers", weight: 3 },
+  { id: "e-803", source: "ep-blake-lemoine", target: "concept-consciousness", label: "covers", weight: 4 },
+  { id: "e-804", source: "ep-skinwalker-ranch", target: "craft-orbs", label: "covers", weight: 4 },
+  { id: "e-805", source: "ep-skinwalker-ranch", target: "program-aawsap", label: "covers", weight: 3 },
+  { id: "e-806", source: "ep-david-grusch", target: "event-grusch-testimony-2023", label: "covers", weight: 5 },
+  { id: "e-807", source: "ep-david-grusch", target: "program-uaptf", label: "covers", weight: 3 },
+  { id: "e-808", source: "ep-lue-elizondo", target: "concept-disclosure", label: "covers", weight: 4 },
+  { id: "e-809", source: "ep-lue-elizondo", target: "concept-nuclear-ufo-connection", label: "covers", weight: 3 },
+  { id: "e-810", source: "ep-michael-herrera", target: "craft-octagonal", label: "covers", weight: 5 },
+  { id: "e-811", source: "ep-michael-herrera", target: "craft-vantablack", label: "covers", weight: 4 },
+  { id: "e-812", source: "ep-varginha-fox", target: "alien-three-fingered", label: "covers", weight: 4 },
+  { id: "e-813", source: "ep-varginha-fox", target: "concept-crash-retrieval", label: "covers", weight: 4 },
+  { id: "e-814", source: "ep-graham-hancock-2", target: "concept-ancient-civilizations", label: "covers", weight: 5 },
+  { id: "e-815", source: "ep-graham-hancock-2", target: "event-younger-dryas", label: "covers", weight: 4 },
+  { id: "e-816", source: "ep-diana-pasulka", target: "org-nassau-group", label: "covers Tyler D/Nassau", weight: 3 },
+  { id: "e-817", source: "ep-diana-pasulka", target: "concept-the-protocol", label: "covers", weight: 3 },
+  { id: "e-818", source: "ep-ilyumzhinov", target: "alien-greys", label: "covers", weight: 3 },
+  { id: "e-819", source: "ep-varginha-witnesses", target: "concept-telepathy", label: "covers", weight: 3 },
+  { id: "e-820", source: "ep-varginha-witnesses", target: "alien-three-fingered", label: "covers", weight: 4 },
+  { id: "e-821", source: "ep-weinstein-puthoff", target: "concept-antigravity", label: "covers", weight: 3 },
+  { id: "e-822", source: "ep-weinstein-puthoff", target: "concept-zero-point-energy", label: "covers", weight: 3 },
+  { id: "e-823", source: "ep-epstein-ufos", target: "org-cia", label: "covers", weight: 3 },
+  { id: "e-824", source: "ep-robert-salas", target: "concept-nuclear-ufo-connection", label: "covers", weight: 5 },
+  { id: "e-825", source: "ep-mario-woods", target: "concept-nuclear-ufo-connection", label: "covers", weight: 4 },
+  { id: "e-826", source: "ep-mario-woods", target: "craft-spherical", label: "covers", weight: 4 },
+  { id: "e-827", source: "ep-richard-dolan", target: "concept-disclosure", label: "covers", weight: 3 },
+  { id: "e-828", source: "ep-garry-nolan", target: "concept-antigravity", label: "covers materials analysis", weight: 3 },
+  { id: "e-829", source: "ep-joe-rogan", target: "concept-consciousness", label: "covers", weight: 3 },
+  { id: "e-830", source: "ep-chris-bledsoe", target: "alien-the-lady", label: "covers", weight: 4 },
+  { id: "e-831", source: "ep-chris-bledsoe", target: "craft-orbs", label: "covers", weight: 3 },
+  { id: "e-832", source: "ep-jake-barber", target: "craft-octagonal", label: "covers", weight: 4 },
+  { id: "e-833", source: "ep-jake-barber", target: "craft-egg", label: "covers", weight: 4 },
+  { id: "e-834", source: "ep-bob-mcgwire", target: "org-cia", label: "covers", weight: 3 },
+  { id: "e-835", source: "ep-bob-mcgwire", target: "org-nsa", label: "covers", weight: 3 },
+  { id: "e-836", source: "ep-townsend-brown", target: "concept-biefeld-brown-effect", label: "covers", weight: 4 },
+  { id: "e-837", source: "ep-townsend-brown", target: "craft-b2-derived", label: "covers", weight: 3 },
+  { id: "e-838", source: "ep-randy-anderson", target: "craft-orbs", label: "covers", weight: 3 },
+  { id: "e-839", source: "ep-baltic-sea", target: "craft-baltic-object", label: "covers", weight: 5 },
+  { id: "e-840", source: "ep-beatriz-villarroel", target: "concept-consciousness", label: "covers", weight: 2 },
+  { id: "e-841", source: "ep-telepathy-tapes", target: "concept-consciousness", label: "covers", weight: 4 },
+  { id: "e-842", source: "ep-jfk-ufos", target: "org-cia", label: "covers", weight: 4 },
+  { id: "e-843", source: "ep-brigham-buhler", target: "concept-disinformation", label: "covers", weight: 3 },
+  { id: "e-844", source: "ep-dan-sherman", target: "org-nsa", label: "covers", weight: 4 },
+  { id: "e-845", source: "ep-jorjani", target: "concept-consciousness", label: "covers", weight: 3 },
+  { id: "e-846", source: "ep-jorjani", target: "concept-disinformation", label: "covers", weight: 2 },
+  { id: "e-847", source: "ep-nasa-dark-secrets", target: "person-jack-parsons", label: "covers", weight: 5 },
+  { id: "e-848", source: "ep-nasa-dark-secrets", target: "person-edgar-mitchell", label: "covers", weight: 4 },
+
+  // --- Missing person-entity connections ---
+  { id: "e-860", source: "person-bob-lazar", target: "location-area-51", label: "claims to have worked at S-4", weight: 4 },
+  { id: "e-861", source: "person-bob-lazar", target: "concept-reverse-engineering", label: "claimed involvement", weight: 4 },
+  { id: "e-862", source: "person-bob-lazar", target: "person-george-knapp", label: "story broken by Knapp", weight: 4 },
+  { id: "e-863", source: "person-j-allen-hynek", target: "person-jacques-vallee", label: "mentor and colleague", weight: 4 },
+  { id: "e-864", source: "person-j-allen-hynek", target: "concept-disclosure", label: "later advocate", weight: 3 },
+  { id: "e-865", source: "person-pippa-malmgren", target: "person-harald-malmgren", label: "daughter", weight: 5 },
+  { id: "e-866", source: "person-tyler-cowen", target: "concept-stagnation-thesis", label: "discussed", weight: 3 },
+  { id: "e-867", source: "person-george-knapp", target: "concept-disclosure", label: "investigative journalism", weight: 4 },
+  { id: "e-868", source: "person-daniel-sheehan", target: "person-david-grusch", label: "legal counsel", weight: 4 },
+  { id: "e-869", source: "person-daniel-sheehan", target: "org-sol-foundation", label: "legal counsel", weight: 3 },
+  { id: "e-870", source: "person-karl-nell", target: "event-grusch-testimony-2023", label: "corroborated publicly", weight: 4 },
+  { id: "e-871", source: "person-john-alexander", target: "person-hal-puthoff", label: "paranormal research colleagues", weight: 3 },
+  { id: "e-872", source: "person-colm-kelleher", target: "location-skinwalker-ranch", label: "research director", weight: 4 },
+  { id: "e-873", source: "person-james-lacatski", target: "person-colm-kelleher", label: "hired for BAASS", weight: 4 },
+  { id: "e-874", source: "person-peter-thiel", target: "person-josh-wolfe", label: "fellow frontier-tech VC", weight: 3 },
+  { id: "e-875", source: "person-richard-barth", target: "event-malmstrom-1967", label: "nuclear site experiencer", weight: 3 },
+  { id: "e-876", source: "person-garry-nolan", target: "concept-disclosure", label: "advocates", weight: 3 },
+  { id: "e-877", source: "person-rolf-mowatt-larssen", target: "person-hal-puthoff", label: "intelligence community colleagues", weight: 2 },
+  { id: "e-878", source: "person-george-knapp", target: "person-lue-elizondo", label: "WEAPONIZED podcast co-host", weight: 3 },
+  { id: "e-879", source: "person-ross-coulthart", target: "person-david-grusch", label: "broke Grusch story", weight: 5 },
+  { id: "e-880", source: "person-bob-lazar", target: "person-hal-puthoff", label: "worked with at S-4 (claimed)", weight: 3 },
+  { id: "e-881", source: "person-eric-weinstein", target: "concept-consciousness", label: "explores intersection with physics", weight: 2 },
+  { id: "e-882", source: "person-tom-delonge", target: "concept-disclosure", label: "advocates", weight: 4 },
+  { id: "e-883", source: "person-tom-delonge", target: "person-peter-levenda", label: "co-authored Sekret Machines", weight: 4 },
+  { id: "e-884", source: "person-jack-parsons", target: "person-edgar-mitchell", label: "JPL/NASA lineage", weight: 2 },
+  { id: "e-885", source: "person-martin-shkreli", target: "concept-disclosure", label: "discussed on show", weight: 2 },
+  { id: "e-886", source: "person-alex-jones", target: "concept-disinformation", label: "discusses media manipulation", weight: 2 },
+  { id: "e-887", source: "person-flying-lotus", target: "concept-disclosure", label: "advocates", weight: 2 },
+  { id: "e-888", source: "person-ammar-kandil", target: "person-jesse-michels", label: "co-producer", weight: 3 },
+  { id: "e-889", source: "person-jim-semivan", target: "person-hal-puthoff", label: "TTSA colleagues", weight: 3 },
+  { id: "e-890", source: "person-hal-puthoff", target: "person-eric-davis", label: "longtime collaborators", weight: 4 },
+  { id: "e-891", source: "person-david-grusch", target: "person-karl-nell", label: "supported testimony", weight: 4 },
+  { id: "e-892", source: "person-eric-davis", target: "person-hal-puthoff", label: "EarthTech colleagues", weight: 4 },
+  { id: "e-893", source: "person-lue-elizondo", target: "program-aawsap", label: "recruited into", weight: 3 },
+
+  // --- Fix orphan/sparse nodes ---
+  { id: "e-900", source: "craft-black-triangle", target: "concept-reverse-engineering", label: "alleged reverse-engineered", weight: 3 },
+  { id: "e-901", source: "craft-black-triangle", target: "concept-crash-retrieval", label: "linked to programs", weight: 2 },
+  { id: "e-902", source: "alien-insectoid", target: "concept-consciousness", label: "reported in altered states", weight: 2 },
+  { id: "e-903", source: "alien-insectoid", target: "alien-greys", label: "often reported alongside", weight: 2 },
+  { id: "e-904", source: "event-nimitz-2004", target: "concept-disclosure", label: "catalyzed modern disclosure", weight: 4 },
+  { id: "e-905", source: "event-nimitz-2004", target: "person-lue-elizondo", label: "investigated by AATIP", weight: 3 },
+  { id: "e-906", source: "craft-tic-tac", target: "concept-antigravity", label: "physics-defying flight", weight: 4 },
+  { id: "e-907", source: "program-disclosure-project", target: "concept-disclosure", label: "core mission", weight: 5 },
+  { id: "e-908", source: "program-ce5", target: "concept-consciousness", label: "based on", weight: 4 },
+  { id: "e-909", source: "alien-greys", target: "concept-crash-retrieval", label: "recovered at crash sites", weight: 3 },
+  { id: "e-910", source: "alien-greys", target: "event-varginha-1996", label: "type encountered", weight: 3 },
+  { id: "e-911", source: "location-rendlesham-forest", target: "concept-nuclear-ufo-connection", label: "nuclear-armed base", weight: 3 },
+  { id: "e-912", source: "org-noaa", target: "concept-nuclear-ufo-connection", label: "maritime UAP data", weight: 2 },
+  { id: "e-913", source: "event-nimitz-2004", target: "event-nyt-2017", label: "footage released in", weight: 5 },
+  { id: "e-914", source: "person-logan-paul", target: "person-jake-barber", label: "appeared alongside", weight: 2 },
+  { id: "e-915", source: "person-redpandakoala", target: "concept-nuclear-ufo-connection", label: "investigated", weight: 3 }
 ];
+
+// --- Auto-generate Jesse Michels "hosted" edges for all episodes ---
+(function() {
+  var existing = {};
+  EDGES.forEach(function(e) {
+    if (e.source === "person-jesse-michels" && e.label === "hosted") existing[e.target] = true;
+  });
+  EPISODE_NODES.forEach(function(ep, i) {
+    if (!existing[ep.id]) {
+      EDGES.push({
+        id: "e-host-" + i,
+        source: "person-jesse-michels",
+        target: ep.id,
+        label: "hosted",
+        weight: 1
+      });
+    }
+  });
+})();
 
 // ===================== ASSEMBLE GRAPH DATA =====================
 window.GRAPH_DATA = {
