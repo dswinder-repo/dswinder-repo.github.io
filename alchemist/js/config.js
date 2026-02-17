@@ -124,8 +124,8 @@ AlchemyBoard.LAYOUT_OPTIONS = {
   animationDuration: 1200,
   animationEasing: 'ease-out-cubic',
   nodeDimensionsIncludeLabels: true,
-  nodeRepulsion: 12000,
-  idealEdgeLength: 180,
+  nodeRepulsion: 14000,
+  idealEdgeLength: 200,
   edgeElasticity: 0.35,
   nestingFactor: 0.1,
   gravity: 0.18,
@@ -140,13 +140,13 @@ AlchemyBoard.LAYOUT_OPTIONS = {
 
 // Default node sizes per category
 AlchemyBoard.NODE_SIZES = {
-  person:       { w: 72, h: 88 },
-  event:        { w: 88, h: 56 },
-  craft:        { w: 58, h: 58 },
-  alien:        { w: 62, h: 62 },
-  program:      { w: 82, h: 52 },
-  organization: { w: 82, h: 52 },
-  episode:      { w: 72, h: 50 },
-  concept:      { w: 76, h: 44 },
-  location:     { w: 72, h: 52 }
+  person:       { w: 90, h: 88 },
+  event:        { w: 100, h: 58 },
+  craft:        { w: 66, h: 66 },
+  alien:        { w: 70, h: 70 },
+  program:      { w: 96, h: 54 },
+  organization: { w: 96, h: 54 },
+  episode:      { w: 96, h: 54 },
+  concept:      { w: 88, h: 48 },
+  location:     { w: 86, h: 54 }
 };

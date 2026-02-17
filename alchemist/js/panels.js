@@ -100,13 +100,16 @@ AlchemyBoard.initPanels = function() {
 
     // YouTube embed (for episode nodes with a youtubeId)
     if (data.youtubeId) {
+      var ytId = escapeHtml(data.youtubeId);
       html += '<div class="panel-divider"></div>';
       html += '<div class="panel-youtube">';
       html += '<iframe width="100%" height="180" src="https://www.youtube.com/embed/' +
-        escapeHtml(data.youtubeId) + '" frameborder="0" ' +
+        ytId + '" title="' + escapeHtml(data.label) + '" frameborder="0" ' +
         'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
-        'allowfullscreen loading="lazy" style="border-radius:6px;"></iframe>';
+        'allowfullscreen style="border-radius:6px;"></iframe>';
       html += '</div>';
+      html += '<a href="https://www.youtube.com/watch?v=' + ytId +
+        '" target="_blank" rel="noopener" class="panel-yt-link">Watch on YouTube &#8599;</a>';
     }
 
     // Connections grouped by category
