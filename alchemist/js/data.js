@@ -46,7 +46,7 @@ var PERSON_NODES = [
   { id: "person-flying-lotus", label: "Flying Lotus", category: "person", subcategory: "public-figure", description: "Hip hop producer who discussed UFO disclosure, DMT, Skinny Bob footage, and consciousness on American Alchemy.", tags: ["producer", "hip-hop", "DMT", "skinny-bob"] },
   { id: "person-brandon-fugal", label: "Brandon Fugal", category: "person", subcategory: "public-figure", description: "Owner of Skinwalker Ranch who has documented orbs, electromagnetic anomalies, and unexplained phenomena.", tags: ["skinwalker-ranch", "owner", "orbs", "anomalies"] },
   { id: "person-rob-rhinehart", label: "Rob Rhinehart", category: "person", subcategory: "public-figure", description: "Founder of Soylent who discussed moving to a goat farm and tech culture experiments.", tags: ["soylent", "tech", "goat-farm", "silicon-valley"] },
-  { id: "person-garrett-mcnamara", label: "Garrett McNamara", category: "person", subcategory: "public-figure", description: "Big wave surfer who surfed the record 100ft wave at Nazare, Portugal.", tags: ["surfing", "nazare", "record", "extreme"] },
+
   { id: "person-brigham-buhler", label: "Brigham Buhler", category: "person", subcategory: "researcher", description: "Ways2Well founder who exposed Rockefeller's role in shaping the pharmaceutical industry and connected it to MKUltra.", tags: ["ways2well", "rockefeller", "big-pharma", "MKUltra"] },
   { id: "person-bob-mcgwire", label: "Bob McGwire", category: "person", subcategory: "intelligence", description: "CIA/NSA/NRO contractor connected to Tim Taylor and an alleged Obama alien prophecy briefing.", tags: ["CIA", "NSA", "NRO", "tim-taylor", "obama"] },
   { id: "person-redpandakoala", label: "RedPandaKoala", category: "person", subcategory: "journalist", description: "UFO YouTube creator who co-investigated the nuclear-UFO connection with Jesse Michels.", tags: ["youtube", "nuclear-ufo", "content-creator"] },
@@ -115,7 +115,7 @@ var PERSON_NODES = [
 var EPISODE_NODES = [
   { id: "ep-weinstein-1", label: "Eric Weinstein: Get Off This Planet", category: "episode", subcategory: "interview", description: "Eric Weinstein discusses Geometric Unity, frontier physics, and wanting to leave Earth.", tags: ["physics", "geometric-unity"] },
   { id: "ep-tyler-cowen", label: "Tyler Cowen: Satoshi & UFOs", category: "episode", subcategory: "interview", description: "Tyler Cowen discusses Satoshi Nakamoto's identity, UFOs, and esoteric Jesus.", tags: ["economics", "satoshi", "esoteric"], youtubeId: "8D3jo3Zw93c" },
-  { id: "ep-mcnamara", label: "Garrett McNamara: 100ft Wave", category: "episode", subcategory: "interview", description: "Garrett McNamara on surfing the 100ft wave at Nazare, Portugal.", tags: ["surfing", "extreme", "nazare"], youtubeId: "AFX7hbVozHQ" },
+
   { id: "ep-jacques-vallee", label: "Jacques Vallee: UFO Evidence", category: "episode", subcategory: "interview", description: "Jacques Vallee on interdimensional entities, secret Blue Book programs, and aliens as co-directors of evolution.", tags: ["interdimensional", "blue-book", "evolution"], youtubeId: "sF03FN37i5w" },
   { id: "ep-weinstein-puthoff", label: "Physics of UFOs: Weinstein + Puthoff", category: "episode", subcategory: "interview", description: "Eric Weinstein and Hal Puthoff discuss physics of UFOs, private aerospace, and the Stargate program.", tags: ["physics", "stargate", "parapsychology"], youtubeId: "23b44fxvz8I" },
   { id: "ep-blake-lemoine", label: "Google Whistleblower: AI Alien", category: "episode", subcategory: "interview", description: "Blake Lemoine on LaMDA sentience, AI consciousness, and whether AI is an alien life form.", tags: ["AI", "google", "sentience", "LaMDA"], youtubeId: "_Losjnk1TlY" },
@@ -183,10 +183,10 @@ var EPISODE_NODES = [
   { id: "ep-fbi-vault-tesla", label: "FBI Vault: Tesla & Trump", category: "episode", subcategory: "documentary", description: "The most viewed document in the FBI Vault — the Tesla-Trump connection and its implications for suppressed technology.", tags: ["FBI", "tesla", "trump", "suppressed-technology"], youtubeId: "mIOiRD8G22I" },
   { id: "ep-john-ramirez", label: "CIA Officer: Aliens Are Interdimensional", category: "episode", subcategory: "interview", description: "Retired CIA officer John Ramirez on 25 years in the agency and his belief that aliens are interdimensional beings.", tags: ["CIA", "interdimensional", "intelligence", "disclosure"], youtubeId: "jH_uT6cI-2o" },
   { id: "ep-avi-loeb", label: "Harvard Is Studying UFOs", category: "episode", subcategory: "interview", description: "Harvard astrophysicist Avi Loeb on the Galileo Project, searching for physical evidence of extraterrestrial technology.", tags: ["harvard", "galileo-project", "astrophysics", "evidence"], youtubeId: "_bM9eAtCOGw" },
-  { id: "ep-peter-thiel", label: "Peter Thiel: Future of Technology", category: "episode", subcategory: "interview", description: "Peter Thiel on the stagnation thesis, frontier physics, and the future of technology.", tags: ["thiel", "stagnation", "technology", "venture-capital"], youtubeId: "P2P-bL6Kz_0" },
+
   { id: "ep-hal-puthoff-solo", label: "Remote Viewing & Psychic Spies", category: "episode", subcategory: "interview", description: "Hal Puthoff on the Stargate remote viewing program, psychic spies, and decades of classified parapsychology research at SRI.", tags: ["remote-viewing", "stargate", "SRI", "parapsychology"], youtubeId: "LZ_yG5dZq0g" },
   { id: "ep-jack-sarfatti", label: "New Theory of UFO Propulsion", category: "episode", subcategory: "interview", description: "Jack Sarfatti on post-quantum mechanics, metamaterial propulsion, and a new physics framework for UFO flight.", tags: ["propulsion", "post-quantum", "metamaterials", "physics"], youtubeId: "W6kZt7t9q_w" },
-  { id: "ep-colm-kelleher", label: "Mystery of Skinwalker Ranch", category: "episode", subcategory: "interview", description: "Colm Kelleher on NIDS research at Skinwalker Ranch, paranormal phenomena, and the science behind the anomalies.", tags: ["skinwalker", "NIDS", "paranormal", "research"], youtubeId: "y2J_5w6k7_8" },
+
   { id: "ep-riz-virk", label: "Are We In A Simulation?", category: "episode", subcategory: "interview", description: "Riz Virk on The Simulation Hypothesis, whether reality is a computer program, and the implications for consciousness.", tags: ["simulation", "consciousness", "reality", "MIT"], youtubeId: "Rm0Z7aFV4aE" }
 ];
 
@@ -513,7 +513,7 @@ var EDGES = [
   { id: "e-301", source: "person-eric-weinstein", target: "ep-weinstein-1", label: "guest", weight: 4 },
   { id: "e-302", source: "person-jesse-michels", target: "ep-tyler-cowen", label: "hosted", weight: 2 },
   { id: "e-303", source: "person-tyler-cowen", target: "ep-tyler-cowen", label: "guest", weight: 4 },
-  { id: "e-304", source: "person-garrett-mcnamara", target: "ep-mcnamara", label: "guest", weight: 4 },
+
   { id: "e-305", source: "person-jacques-vallee", target: "ep-jacques-vallee", label: "guest", weight: 5 },
   { id: "e-306", source: "person-eric-weinstein", target: "ep-weinstein-puthoff", label: "guest", weight: 4 },
   { id: "e-307", source: "person-hal-puthoff", target: "ep-weinstein-puthoff", label: "guest", weight: 5 },
@@ -953,20 +953,19 @@ var EDGES = [
   { id: "e-916", source: "person-whitley-strieber", target: "ep-whitley-strieber", label: "guest", weight: 5 },
   { id: "e-917", source: "person-john-ramirez", target: "ep-john-ramirez", label: "guest", weight: 5 },
   { id: "e-918", source: "person-avi-loeb", target: "ep-avi-loeb", label: "guest", weight: 5 },
-  { id: "e-919", source: "person-peter-thiel", target: "ep-peter-thiel", label: "guest", weight: 5 },
+
   { id: "e-920", source: "person-hal-puthoff", target: "ep-hal-puthoff-solo", label: "guest", weight: 5 },
   { id: "e-921", source: "person-jack-sarfatti", target: "ep-jack-sarfatti", label: "guest", weight: 5 },
-  { id: "e-922", source: "person-colm-kelleher", target: "ep-colm-kelleher", label: "guest", weight: 5 },
+
   { id: "e-923", source: "person-riz-virk", target: "ep-riz-virk", label: "guest", weight: 5 },
   // Topic connections for new episodes
   { id: "e-924", source: "ep-john-ramirez", target: "alien-interdimensional", label: "covers", weight: 4 },
   { id: "e-925", source: "ep-avi-loeb", target: "org-sol-foundation", label: "covers", weight: 3 },
   { id: "e-926", source: "ep-hal-puthoff-solo", target: "program-stargate", label: "covers", weight: 5 },
   { id: "e-927", source: "ep-hal-puthoff-solo", target: "concept-remote-viewing", label: "covers", weight: 5 },
-  { id: "e-928", source: "ep-colm-kelleher", target: "location-skinwalker-ranch", label: "covers", weight: 5 },
-  { id: "e-929", source: "ep-colm-kelleher", target: "org-nids", label: "covers", weight: 4 },
+
   { id: "e-930", source: "ep-jack-sarfatti", target: "concept-antigravity", label: "covers", weight: 4 },
-  { id: "e-931", source: "ep-peter-thiel", target: "org-thiel-capital", label: "covers", weight: 3 },
+
   { id: "e-932", source: "ep-riz-virk", target: "concept-consciousness", label: "covers", weight: 3 },
   { id: "e-933", source: "ep-whitley-strieber", target: "alien-interdimensional", label: "covers", weight: 3 },
 
@@ -988,14 +987,12 @@ var EDGES = [
   { id: "e-944", source: "ep-fbi-vault-tesla", target: "concept-disinformation", label: "covers", weight: 3 },
   { id: "e-945", source: "ep-john-ramirez", target: "org-cia", label: "covers", weight: 5 },
   { id: "e-946", source: "ep-avi-loeb", target: "concept-disclosure", label: "covers", weight: 4 },
-  { id: "e-947", source: "ep-peter-thiel", target: "concept-stagnation-thesis", label: "covers", weight: 5 },
-  { id: "e-948", source: "ep-peter-thiel", target: "concept-disclosure", label: "covers", weight: 3 },
+
   { id: "e-949", source: "ep-hal-puthoff-solo", target: "org-cia", label: "covers", weight: 3 },
   { id: "e-950", source: "ep-hal-puthoff-solo", target: "org-sri", label: "covers", weight: 4 },
   { id: "e-951", source: "ep-jack-sarfatti", target: "concept-consciousness", label: "covers", weight: 3 },
   { id: "e-952", source: "ep-whitley-strieber", target: "concept-consciousness", label: "covers", weight: 4 },
-  { id: "e-953", source: "ep-colm-kelleher", target: "program-aawsap", label: "covers", weight: 4 },
-  { id: "e-954", source: "ep-colm-kelleher", target: "org-baass", label: "covers", weight: 4 },
+
   { id: "e-955", source: "ep-riz-virk", target: "concept-ancient-civilizations", label: "covers", weight: 2 },
   { id: "e-956", source: "ep-whitley-strieber", target: "alien-greys", label: "covers", weight: 3 },
 
