@@ -269,6 +269,22 @@
   margin: 4px 0 10px;
 }
 
+.panel-yt-link {
+  display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #CC2200;
+  text-decoration: none;
+  margin: 4px 0 0;
+  transition: color 0.15s;
+}
+
+.panel-yt-link:hover {
+  color: #FF4422;
+  text-decoration: underline;
+}
+
 /* === Bottom Sheet (Mobile) === */
 
 .bottom-sheet {

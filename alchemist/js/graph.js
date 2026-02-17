@@ -138,10 +138,10 @@ AlchemyBoard.initGraph = function() {
         'text-outline-color': 'rgba(245, 240, 232, 0.85)',
         'text-outline-width': 2.5,
         'text-max-width': function(ele) {
-          return ((SIZES[ele.data('category')] || SIZES.concept).w + 4) + 'px';
+          return ((SIZES[ele.data('category')] || SIZES.concept).w + 10) + 'px';
         },
         'text-wrap': 'wrap',
-        'text-overflow-wrap': 'anywhere',
+        'text-overflow-wrap': 'whitespace',
         'ghost': 'yes',
         'ghost-offset-x': 2,
         'ghost-offset-y': 2,
