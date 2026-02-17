@@ -968,7 +968,58 @@ var EDGES = [
   { id: "e-930", source: "ep-jack-sarfatti", target: "concept-antigravity", label: "covers", weight: 4 },
   { id: "e-931", source: "ep-peter-thiel", target: "org-thiel-capital", label: "covers", weight: 3 },
   { id: "e-932", source: "ep-riz-virk", target: "concept-consciousness", label: "covers", weight: 3 },
-  { id: "e-933", source: "ep-whitley-strieber", target: "alien-interdimensional", label: "covers", weight: 3 }
+  { id: "e-933", source: "ep-whitley-strieber", target: "alien-interdimensional", label: "covers", weight: 3 },
+
+  // ===================== WAVE 4: EDGE GAP CLOSURE =====================
+
+  // --- Person-entity edges for Wave 3 people ---
+  { id: "e-934", source: "person-whitley-strieber", target: "concept-consciousness", label: "experiencer", weight: 4 },
+  { id: "e-935", source: "person-whitley-strieber", target: "alien-greys", label: "encounter (Communion)", weight: 4 },
+  { id: "e-936", source: "person-john-ramirez", target: "org-cia", label: "25-year officer", weight: 5 },
+  { id: "e-937", source: "person-john-ramirez", target: "alien-interdimensional", label: "theorizes", weight: 4 },
+  { id: "e-938", source: "person-jack-sarfatti", target: "concept-antigravity", label: "propulsion theory", weight: 4 },
+  { id: "e-939", source: "person-jack-sarfatti", target: "concept-consciousness", label: "post-quantum theory", weight: 3 },
+  { id: "e-940", source: "person-riz-virk", target: "concept-consciousness", label: "simulation hypothesis", weight: 4 },
+
+  // --- Missing episode-topic edges for Wave 3 episodes ---
+  { id: "e-941", source: "ep-what-we-know", target: "concept-disclosure", label: "covers", weight: 5 },
+  { id: "e-942", source: "ep-what-we-know", target: "concept-crash-retrieval", label: "covers", weight: 4 },
+  { id: "e-943", source: "ep-fbi-vault-tesla", target: "concept-antigravity", label: "covers", weight: 3 },
+  { id: "e-944", source: "ep-fbi-vault-tesla", target: "concept-disinformation", label: "covers", weight: 3 },
+  { id: "e-945", source: "ep-john-ramirez", target: "org-cia", label: "covers", weight: 5 },
+  { id: "e-946", source: "ep-avi-loeb", target: "concept-disclosure", label: "covers", weight: 4 },
+  { id: "e-947", source: "ep-peter-thiel", target: "concept-stagnation-thesis", label: "covers", weight: 5 },
+  { id: "e-948", source: "ep-peter-thiel", target: "concept-disclosure", label: "covers", weight: 3 },
+  { id: "e-949", source: "ep-hal-puthoff-solo", target: "org-cia", label: "covers", weight: 3 },
+  { id: "e-950", source: "ep-hal-puthoff-solo", target: "org-sri", label: "covers", weight: 4 },
+  { id: "e-951", source: "ep-jack-sarfatti", target: "concept-consciousness", label: "covers", weight: 3 },
+  { id: "e-952", source: "ep-whitley-strieber", target: "concept-consciousness", label: "covers", weight: 4 },
+  { id: "e-953", source: "ep-colm-kelleher", target: "program-aawsap", label: "covers", weight: 4 },
+  { id: "e-954", source: "ep-colm-kelleher", target: "org-baass", label: "covers", weight: 4 },
+  { id: "e-955", source: "ep-riz-virk", target: "concept-ancient-civilizations", label: "covers", weight: 2 },
+  { id: "e-956", source: "ep-whitley-strieber", target: "alien-greys", label: "covers", weight: 3 },
+
+  // --- Missing topic edges for older episodes ---
+  { id: "e-957", source: "ep-tyler-cowen", target: "concept-stagnation-thesis", label: "covers", weight: 4 },
+  { id: "e-958", source: "ep-alex-jones", target: "concept-disinformation", label: "covers", weight: 3 },
+  { id: "e-959", source: "ep-rolf-mowatt-larssen", target: "concept-disclosure", label: "covers", weight: 3 },
+  { id: "e-960", source: "ep-lue-elizondo", target: "program-aawsap", label: "covers", weight: 3 },
+  { id: "e-961", source: "ep-garry-nolan", target: "event-wilson-davis-memo", label: "references", weight: 2 },
+  { id: "e-962", source: "ep-eric-davis", target: "event-wilson-davis-memo", label: "covers", weight: 4 },
+  { id: "e-963", source: "ep-eric-davis", target: "org-cia", label: "covers", weight: 4 },
+  { id: "e-964", source: "ep-ross-coulthart", target: "concept-reverse-engineering", label: "covers", weight: 3 },
+
+  // --- Missing guest edge: Grusch appeared in Mike Masters episode ---
+  { id: "e-965", source: "person-david-grusch", target: "ep-mike-masters", label: "appeared in", weight: 3 },
+
+  // --- Cross-person connections ---
+  { id: "e-966", source: "person-colm-kelleher", target: "person-robert-bigelow", label: "worked for", weight: 4 },
+  { id: "e-967", source: "person-jack-sarfatti", target: "person-hal-puthoff", label: "physics contemporaries", weight: 2 },
+  { id: "e-968", source: "person-whitley-strieber", target: "person-jacques-vallee", label: "both pioneer NHI theories", weight: 2 },
+  { id: "e-969", source: "person-john-ramirez", target: "person-lue-elizondo", label: "intelligence community colleagues", weight: 2 },
+  { id: "e-970", source: "person-avi-loeb", target: "person-garry-nolan", label: "Sol Foundation colleagues", weight: 3 },
+  { id: "e-971", source: "person-kevin-knuth", target: "org-nasa", label: "former researcher", weight: 4 },
+  { id: "e-972", source: "person-mike-masters", target: "person-david-grusch", label: "co-appeared on show", weight: 3 }
 ];
 
 // --- Auto-generate Jesse Michels "hosted" edges for all episodes ---
